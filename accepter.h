@@ -2,7 +2,6 @@
 
 class Acceptor {
 
-        //ÉÏ´Î±í¾ö½á¹û
 private:
     long   pb;
     long   ab;
@@ -18,7 +17,7 @@ public:
     }
 
     Promise* onPrepare(long b) {        
-        //¼ÙÉèÕâ¸ö¹ı³ÌÓĞ20%µÄ¼¸ÂÊÊ§°Ü
+        //å‡è®¾è¿™ä¸ªè¿‡ç¨‹æœ‰50%çš„å‡ ç‡å¤±è´¥
         if (rand() / double(RAND_MAX) - 0.5 > 0) {
             std::cout << "accepter: " << this->name << " prepare no response" << std::endl;
             return NULL;
@@ -36,7 +35,7 @@ public:
     }
 
     bool onAccept(long b, string v) {
-        //¼ÙÉèÕâ¸ö¹ı³ÌÓĞ20%µÄ¼¸ÂÊÊ§°Ü
+        //å‡è®¾è¿™ä¸ªè¿‡ç¨‹æœ‰50%çš„å‡ ç‡å¤±è´¥
         if (rand() / double(RAND_MAX) - 0.5 > 0) {
             std::cout << "accepter: " << this->name << " accept no response" << std::endl;
             return false;
